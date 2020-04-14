@@ -3,8 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PokemonService } from 'src/app/servises/pokemon.service';
 import { PokemonDetails } from 'src/app/common/pokemon-details';
 import { Abilities } from 'src/app/common/abilities';
-import { PokemonEvolution } from 'src/app/common/pokemon-evolution';
-import { Species } from 'src/app/common/species';
+
 
 @Component({
   selector: 'app-pokemon-details',
@@ -16,8 +15,6 @@ export class PokemonDetailsComponent implements OnInit {
   constructor(private _pokemonService:PokemonService,private _acticatedRoute:ActivatedRoute) { }
   currentPokemonID:number;
   pokemonDetails:PokemonDetails;
-  pokemmonEvolution:PokemonEvolution;
-  pokemonSpecies:Species;
   ngOnInit(): void {
     this._acticatedRoute.paramMap.subscribe(()=>{
       this.PokemonDetails();

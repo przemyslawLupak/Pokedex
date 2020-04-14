@@ -6,28 +6,32 @@ import { AppComponent } from './app.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonService } from './servises/pokemon.service';
 import { RouterModule, Routes } from '@angular/router';
-import { PaeNotFoundComponent } from './components/pae-not-found/pae-not-found.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PokemonCategoryComponent } from './components/pokemon-category/pokemon-category.component';
 import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 import { NgxPopper } from 'angular-popper';
 import { PokemonOfTypeComponent } from './components/pokemon-of-type/pokemon-of-type.component';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { AboutComponent } from './components/about/about.component';
+import { KontaktComponent } from './components/kontakt/kontakt.component';
 
 const routes: Routes=[
   {path:'pokemones',component:PokemonListComponent},
   {path:'type/:id', component:PokemonOfTypeComponent},
   {path:'pokemon/:id', component:PokemonDetailsComponent},
   {path:'',redirectTo:'pokemones',pathMatch:'full'},
-  {path:'**',component:PaeNotFoundComponent}
+  {path:'**',component:PageNotFoundComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,
     PokemonListComponent,
-    PaeNotFoundComponent,
+    PageNotFoundComponent,
     PokemonCategoryComponent,
     PokemonDetailsComponent,
-    PokemonOfTypeComponent
+    PokemonOfTypeComponent,
+    AboutComponent,
+    KontaktComponent
   ],
   imports: [
     BrowserModule,

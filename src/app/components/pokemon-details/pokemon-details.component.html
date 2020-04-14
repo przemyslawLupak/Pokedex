@@ -1,0 +1,34 @@
+<div class="row m-auto">
+    <div class="col-md-4 "></div>
+    <div class="col-md-4 text-center p-3 bg-trans-top"><h1>{{pokemonDetails.id}}.{{pokemonDetails.name | titlecase}}</h1></div>
+    <div class="col-md-4"></div>
+</div>
+<div class="row poke-det">
+<div class="col-md-8 m-auto ">
+ <div class="row">
+             <div class="col-sm-12 col-md-6  ">
+                     <img class="rounded mx-auto d-block" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{currentPokemonID}}.png" height="200" width="200" >
+                </div>
+         <div class="col-md-6 m-auto bg-trans">
+             <div class="row poke-stat">
+                 <div class="col-md-6 text-center p-2">
+                     <h2>Height: {{pokemonDetails.height}}</h2>
+                 </div>
+                 <div class="col-md-6 text-center p-2">
+                     <h2>Weight: {{pokemonDetails.weight}}</h2>
+                 </div>
+                 <div class="stat-md-6 m-auto text-center p-2">
+                     <h2>Ability: {{pickAbility(pokemonDetails.abilities)}}</h2>
+                 </div>
+             </div>
+             <div class="col-md-6 m-auto"></div>
+             <div class="row">
+             <div class="col-6 col-sm-6 col-md-6 col-lg-6 m-auto" *ngFor="let pokemonType of pokemonDetails.types;">
+                 <h1 class="{{pokemonType.type.name}} text-center p-2 pb-6">{{pokemonType.type.name | titlecase}}</h1>
+             </div>
+            </div>
+ 
+         </div>
+     </div>
+ </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="btn-group dropright">
+    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Types
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#" *ngFor="let type of types| slice:0:18 ; index as typeIndex" routerLink="/type/{{typeIndex+1}}">{{type.name}}</a>
+    </div>
+  </div>
+  
+  

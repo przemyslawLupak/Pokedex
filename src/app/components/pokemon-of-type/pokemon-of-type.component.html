@@ -1,0 +1,31 @@
+
+<div class="row pt-0 mt-0">
+  
+    <div class="col-lg-2 col-md-12">
+     
+      <div class="row">
+          <div class="col-md-12 col-sm-10 py-2">
+            <input type="text" class="form-control font-size-1"placeholder="Search Pokemon">
+          </div>
+      </div>
+       <app-pokemon-category></app-pokemon-category>
+      <ul>
+  
+      </ul>
+    </div>
+    <!-- /.col-lg-3 -->
+  
+        <div class="col-lg-10">
+        
+          <div class="row ml-0">
+            <div class="col-lg-2 col-md-6 mt-2 col-6 ml-0 "*ngFor="let pokemon of pokemonesType; index as pokemonIndex;">
+              <div class="card h-lg-20 mb-0" >
+                <a><img routerLink="/pokemon/{{cutUrl(pokemon.pokemon.url)}}" class="card-img-top pokemon-card image-responsive"  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{cutUrl(pokemon.pokemon.url)}}.png"    alt=""></a>            
+                <div class="card-body h-20 mt-0 text-center bg-light font-size-1">
+                  <a routerLink="/pokemon/{{cutUrl(pokemon.pokemon.url)}}"  class="card-text text-center ">{{pokemon.pokemon.name}}</a>
+                </div> 
+              </div>
+            </div>
+          </div>
+        
+  

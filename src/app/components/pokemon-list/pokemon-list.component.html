@@ -1,0 +1,47 @@
+<div class="row pt-0 mt-0">
+  
+  <div class="col-lg-2 col-md-12">
+   
+    <div class="row">
+        <div class="col-md-12 col-sm-10 py-2">
+          <input type="text" class="form-control font-size-1"placeholder="Search Pokemon">
+        </div>
+    </div>
+     <app-pokemon-category></app-pokemon-category>
+    <ul>
+
+    </ul>
+  </div>
+  <!-- /.col-lg-3 -->
+
+  <div class="col-lg-10">
+
+    <div class="row ml-0">
+      <div class="col-lg-2 col-md-6 mt-2 col-6 ml-0 "*ngFor="let pokemon of pokemones | slice:startIndex:endIndex; index as pokemonIndex">
+        <div class="card h-lg-20 mb-0" >
+          <a><img routerLink="/pokemon/{{cutUrl(pokemon.url)}}" class="card-img-top pokemon-card image-responsive" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{cutUrl(pokemon.url)}}.png"   alt=""></a>            
+          <div class="card-body h-20 mt-0 text-center bg-light font-size-1">
+            <a routerLink="/pokemon/{{cutUrl(pokemon.url)}}" class="card-text text-center ">{{pokemon.name}}</a>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <!-- /.row -->`
+
+  </div>
+<div class="row m-auto">
+  <div class="col-lg-4 col-md-10 m-auto col-10">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" (click)="decreaseIndex()" ><i class="fas fa-chevron-left"></i></a></li>
+        <li *ngFor="let item of getArrayFromNumber(pokemones.length); index as i" class="page-item">
+          <a class="page-link" (click)="updateIndex(i)" (click)="call()" >{{i + 1}}</a></li>
+        <li class="page-item"><a class="page-link"  (click)="increaseIndex()"><i class="fas fa-chevron-right"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+

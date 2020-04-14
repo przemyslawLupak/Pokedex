@@ -1,0 +1,142 @@
+.poke-det{
+    height: 400px;
+    
+}
+.poke-stat{
+    height: 200px;
+}
+.bg-big{
+    height: 100hv;
+}
+.bg-trans-top{
+    background: rgba(211, 211, 211, 0.6);
+    border-radius: 60%;
+}
+.bg-trans{
+    background: rgba(211, 211, 211, 0.6);
+    border-radius: 10%;
+}
+.water{
+    background-color: #6890F0;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+
+}
+.poison{
+    background-color: #A040A0;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+   
+}
+.flying{
+    background-color: #A890F0;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+}
+.grass{
+    background-color: #78C850;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+
+}
+.normal{
+    background-color: #A8A878;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+
+}
+.fighting{
+    background-color: #C03028;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+ 
+}
+.ground{
+    background-color: #E0C068;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+}
+.rock{
+    background-color: #B8A038;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+  
+}
+.bug{
+    background-color: #A8B820;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+   
+}
+.ghost{
+    background-color: #705898;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+  
+}
+.steel{
+    background-color: #B8B8D0;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+
+}
+.fire{
+    background-color: #F08030;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+ 
+}
+.electric{
+    background-color: #F8D030;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+   
+}
+.psychic{
+    background-color: #F85888;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+ 
+}
+.ice{
+    background-color: #98D8D8;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+  
+}
+.dragon{
+    background-color: #7038F8;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+  
+}
+.dark{
+    background-color: #705848;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+   
+}
+.fairy{
+    background-color: #EE99AC;
+    border-radius:20px ;
+    font-size: 20px;
+    color: white;
+    
+}

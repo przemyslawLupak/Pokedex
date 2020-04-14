@@ -1,6 +1,9 @@
 .pokemonTitle{
     font-size: 12px;
 }
+.pointer{
+    cursor: pointer;
+}
 .pokemon-card{
     background-color: whitesmoke;
     transition: background-color 0.5s;

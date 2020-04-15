@@ -3,16 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {  Pokemon } from '../common/pokemon';
-import{PokemonCategory}from'../common/pokemon-category'
 import { PokemonType } from '../common/pokemon-type';
-import { getLocaleExtraDayPeriods } from '@angular/common';
 import { TypeList } from '../common/type-list';
 import { PokemonDetails } from '../common/pokemon-details';
-import { Abilities } from '../common/abilities';
-import { Stats } from '../common/stats';
-import { Types } from '../common/types';
-import { Species } from '../common/species';
-import { PokemonEvolution } from '../common/pokemon-evolution';
+
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +16,6 @@ export class PokemonService {
   private baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=964";
   private primaryUrl = "https://pokeapi.co/api/v2/type";
   private pokemonDetailUrl ="https://pokeapi.co/api/v2/pokemon/";
-  private pokemonSpeciesUrl ="https://pokeapi.co/api/v2/pokemon-species/";
   constructor(private httpClient: HttpClient) { }
 
 
@@ -52,33 +45,20 @@ getPokemonTypes():Observable<TypeList[]>{
     map(responce=> responce.results)
   )
 }
-getPokemonSpecies(id:number):Observable<Species>{
-  const localUrl= `${this.pokemonSpeciesUrl}${id}`;
-  return this.httpClient.get<GetResponcePokemonSpec>(localUrl).pipe(
-    map(responce=> responce.evolution_chain))
-}
-getPokemonEvolution(url:string):Observable<PokemonEvolution>{
-  return this.httpClient.get<GetResponcePokemonEvolution>(url).pipe(
-    map(responce=> responce.chain)) 
-}
+
 }
 
 interface GetResponceType{
   
   results:TypeList[];
 }
-interface GetResponcePokemonSpec{
-  evolution_chain:Species;
-}
+
 
 interface GetResponcePokemones{
 
   results:Pokemon[];
 }
-interface GetResponcePokemonEvolution{
 
-  chain:PokemonEvolution;
-}
     
   interface GetResponcePokemonesByType{
     damage_relactions:{

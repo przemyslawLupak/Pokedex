@@ -8,10 +8,7 @@
 .bg-big{
     height: 100hv;
 }
-.bg-trans-top{
-    background: rgba(211, 211, 211, 0.6);
-    border-radius: 60%;
-}
+
 .bg-trans{
     background: rgba(211, 211, 211, 0.6);
     border-radius: 10%;

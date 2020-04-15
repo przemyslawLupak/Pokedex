@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Pokemon } from './common/pokemon';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { Pokemon } from './common/pokemon';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Pokedex';
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("Pokedex");
+  }
+
   
 }

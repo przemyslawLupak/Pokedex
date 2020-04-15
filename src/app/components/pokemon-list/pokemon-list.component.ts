@@ -2,8 +2,9 @@ import { Component, OnInit, Inject, ElementRef, HostListener, HostBinding } from
 import { Pokemon } from 'src/app/common/pokemon';
 import { PokemonService } from 'src/app/servises/pokemon.service';
 import { ActivatedRoute } from '@angular/router';
+import { startWith } from 'rxjs/operators';
 declare const scrollTop:any;
-
+const  CACHE_KEY='HttpPokemonKey';
 @Component({
   selector: 'app-book-list',
   templateUrl: './pokemon-list.component.html',
@@ -15,7 +16,7 @@ export class PokemonListComponent implements OnInit {
   currentCategoryId= 1;
   startIndex=0;
   endIndex=100;
-  cardPos;
+  poki;
   constructor(private _pokemonService: PokemonService,private _activatedRoute: ActivatedRoute,
     public el: ElementRef<HTMLElement>) { }
  
@@ -68,8 +69,15 @@ export class PokemonListComponent implements OnInit {
 
   }
   listPokemones(){
-    this._pokemonService.getPokemones().subscribe(
-      data => this.pokemones=data)
+    this.poki =this._pokemonService.getPokemones().subscribe(
+      data => this.pokemones=data);
+
+    this.poki.subscribe(next=> 
+      localStorage[CACHE_KEY]=JSON.stringify(next));
+
+    this.poki = this.poki.pipe(
+      startWith(JSON.parse(localStorage[CACHE_KEY] || '[]'))
+    )
    
  }
   

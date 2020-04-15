@@ -5,13 +5,19 @@
 .poke-stat{
     height: 200px;
 }
-.bg-big{
-    height: 100hv;
+.bg-title{
+    background: rgba(211, 211, 211, 1);
+    border-radius: 33px;
+border-top-left-radius: 333px;
+border-bottom-right-radius: 333px;
 }
-
+.bg-all{
+    background: rgba(211, 211, 211, 0.5);
+    border-radius: 30px;
+}
 .bg-trans{
     background: rgba(211, 211, 211, 0.6);
-    border-radius: 10%;
+    border-radius: 30px;
 }
 .water{
     background-color: #6890F0;

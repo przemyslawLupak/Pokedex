@@ -20,7 +20,10 @@ const routes: Routes=[
   {path:'type/:id', component:PokemonOfTypeComponent},
   {path:'pokemon/:id', component:PokemonDetailsComponent},
   {path:'',redirectTo:'pokemones',pathMatch:'full'},
+  {path:'about',component:AboutComponent},
+  {path:'contact',component:KontaktComponent},
   {path:'**',component:PageNotFoundComponent}
+  
 ]
 @NgModule({
   declarations: [

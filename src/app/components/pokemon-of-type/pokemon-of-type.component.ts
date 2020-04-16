@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonType } from 'src/app/common/pokemon-type';
 import { PokemonService } from 'src/app/servises/pokemon.service';
-import { Pokemon } from 'src/app/common/pokemon';
 import { ActivatedRoute } from '@angular/router';
-
+import { startWith } from 'rxjs/operators';
+const CACHE_KEY='HttpPokemonTypeKey'
 @Component({
   selector: 'app-pokemon-of-type',
   templateUrl: './pokemon-of-type.component.html',
@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class PokemonOfTypeComponent implements OnInit {
   pokemonesType:PokemonType[];
   currentCategoryId:number;
+  pokiType;
   constructor(private _pokemonService: PokemonService,private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -50,6 +51,12 @@ export class PokemonOfTypeComponent implements OnInit {
 
     this._pokemonService.getPokemonesByType(this.currentCategoryId).subscribe(
       data => this.pokemonesType= data
+    )
+    this.pokiType.subscribe(next=> 
+      localStorage[CACHE_KEY]=JSON.stringify(next));
+
+    this.pokiType = this.pokiType.pipe(
+      startWith(JSON.parse(localStorage[CACHE_KEY] || '[]'))
     )
   }
 

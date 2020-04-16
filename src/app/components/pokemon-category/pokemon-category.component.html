@@ -1,11 +1,8 @@
-<div class="col-lg-0">
-<div class="btn-g/roup dropright">
-    <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Types
-    </button>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#" *ngFor="let type of types| slice:0:18 ; index as typeIndex" routerLink="/type/{{typeIndex+1}}">{{type.name}}</a>
-    </div>
-  </div>
-</div>  
-  
+<div>
+  <ul class="list-group aria-expanded-lg collapse" aria-expanded="true" id="listResposive">
+    <li class="list-group-item" *ngFor="let type of types| slice:0:18 ; index as typeIndex" routerLink="/type/{{typeIndex+1}}">{{type.name}}</li>
+  </ul>
+  <button class="toggler" type="button" data-toggle="collapse" data-target="#listResposive" aria-controls="#listResposive" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="">Types</span>
+  </button>
+</div>

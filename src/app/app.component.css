@@ -5,7 +5,12 @@
     
 }
 *{
-    font-family:'Baloo Tamma 2' ;
+    font-family:'Roboto Mono' ;
+}
+.font-style{
+    font-size: 20px;
+    font-weight: bold;    
+    text-shadow: 2px 0px 3px darkgrey;
 }
 .poke-container{
     background-color: #CC0000;

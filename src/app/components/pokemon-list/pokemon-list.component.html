@@ -25,10 +25,10 @@
   <div class="col-lg-4 col-md-10 m-auto col-10">
     <nav aria-label="Page navigation example">
       <ul class="pagination">
-        <li class="page-item"><a class="page-link" (click)="decreaseIndex()" ><i class="fas fa-chevron-left"></i></a></li>
+        <li class="page-item"><a class="page-link" (click)="call()" (click)="decreaseIndex()" ><</a></li>
         <li *ngFor="let item of getArrayFromNumber(pokemones.length); index as i" class="page-item">
           <a class="page-link" (click)="updateIndex(i)" (click)="call()" >{{i + 1}}</a></li>
-        <li class="page-item"><a class="page-link"  (click)="increaseIndex()"><i class="fas fa-chevron-right"></i></a></li>
+        <li class="page-item"><a class="page-link" (click)="call()" (click)="increaseIndex()">></a></li>
       </ul>
     </nav>
   </div>

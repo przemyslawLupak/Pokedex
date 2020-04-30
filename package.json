@@ -23,7 +23,7 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "angular-popper": "^2.0.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-lazyload-image": "^7.1.0",
     "popper.js": "^1.14.0",
     "rxjs": "~6.5.4",
